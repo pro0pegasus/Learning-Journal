@@ -107,6 +107,31 @@ nav{
 /* .blog{
 } */
 
+.view-more{
+    margin: 0 auto;
+}
+
+.hidden{
+    display:none;
+}
+
+button{
+    background-color: #FAFAFA;
+    color: #000000;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 1em;
+    font-weight: 700;
+    padding-bottom: 0px;
+    margin-bottom: 2em;
+}
+
+button:hover{
+    cursor:pointer;
+    color: grey;
+    border-bottom: 1px solid grey;
+}
+
 .foot{
     padding: 2.31em 0;
 }
@@ -374,5 +399,9 @@ nav a:active{
 
     .userinfo-details .article-title-post{
         margin-bottom: 0.5em;
+    }
+
+    .view-more{
+        grid-column: span 3;
     }
 }
