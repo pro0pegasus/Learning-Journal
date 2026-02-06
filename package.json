@@ -10,10 +10,5 @@
   "dependencies": {
     "vite": "latest"
   },
-  "devDependencies": {},
-  
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
-
+  "devDependencies": {}
 }
