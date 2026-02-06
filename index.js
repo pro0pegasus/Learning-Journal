@@ -4,7 +4,7 @@ const viewMoreBtnEl = document.getElementById('view-more-Btn');
 
 viewMoreBtnEl.addEventListener("click", function () {
 
-    const divs = document.querySelectorAll('.blog');
+    const divs = document.querySelectorAll('.hidden');
 
     divs.forEach(function(div) {
         div.classList.toggle('hidden');
