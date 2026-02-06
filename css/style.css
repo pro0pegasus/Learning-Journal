@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source sans Pro', sans-serif;
+    background-color: #FAFAFA;
 }
 
 * {
@@ -11,10 +12,16 @@ body {
 
 /*========= Flexbox =========*/
 
-nav, .logo, .nav-links li {
+nav, .logo {
     display: flex;
     align-items: center ;
     flex-direction: row;
+}
+
+.nav-links{
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
 footer .foot{
@@ -41,9 +48,8 @@ nav{
     margin-right: auto;
 }
 
-.nav-links li {
-    list-style-type: none;
-    gap:40px;
+.nav-links li{
+    list-style: none;
 }
 
 .hero-section{
@@ -74,7 +80,7 @@ nav{
 }
 
 .container{
-    margin: 2.125em auto;
+    margin: 1.68em auto;
     width:85%;
     display:grid;
     grid-gap: 2.56em;
@@ -101,24 +107,45 @@ nav{
 /* .blog{
 } */
 
-.footer{
-    margin: 2.31em 0;
+.foot{
+    padding: 2.31em 0;
 }
 
-h4{
-    margin-bottom:0;
-    font-weight:700;
-    color: #ECECEC;
+.content-container{
+    width: 85%;
+    margin: 2em auto 3.18em auto;
+}
+
+.article-post-img{
+    width:100%;
+    margin: 2.18rem 0;
+}
+
+.article-date-post{
+    margin-top:0
 }
 
 p{
-    margin-top:0;
-    font-weight: 400;
-    color: #D7D7D7;
+    margin-bottom:0;
 }
 
-h4, p{
-    font-size: 0.75rem;
+.highlight{
+    margin-top:0;
+}
+
+.recent-post{
+    text-align:center;
+    margin:0;
+}
+
+.profile-pic{
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+}
+
+.userinfo-container{
+    margin-bottom: 3.125em;
 }
 
 /*========= Font Styles =========*/
@@ -141,7 +168,7 @@ a{
 }
 
 
-.article-link{
+.article-link, .hero-link-post{
     text-decoration: none;
 }
 
@@ -160,7 +187,9 @@ a{
     font-weight: 400;
 }
 
-.hero-post{
+.article-date-hero,
+.article-title-hero,
+.article-pg-hero{
     color:#FFFFFF;
 } 
 
@@ -182,23 +211,64 @@ a{
     color:#505050;
 }
 
+h4{
+    margin-bottom:0;
+    font-weight:700;
+    color: #ECECEC;
+}
+
+.copyright{
+    margin-top:0;
+    font-weight: 400;
+    color: #D7D7D7;
+}
+
+h4, .copyright{
+    font-size: 0.75rem;
+}
+
+.article-date-post,
+.article-title-post,
+p,
+h3{
+    color:#151515;
+}
+
+.article-date-post{
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.article-title-post{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+}
 
 /*========= hover/active =========*/
 
-nav a:hover {
+nav a:hover, 
+nav a:active{
     text-decoration: underline;
     cursor: pointer;
 }
+
+.blog:hover, 
+.blog:active{
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
 
 /*========= Media queries =========*/
 
 @media (min-width: 481px) {
     nav{
         padding: 1.5rem 3.31rem;
-    }
-
-    img{
-        min-width: 2vw;
     }
 
     h1{
@@ -243,12 +313,12 @@ nav a:hover {
         margin: 0.56rem 0;
     }
 
-    .hero-post .hero-pg-hero{
+    .hero-post .article-pg-hero{
         margin-bottom: 4.81rem;
     }
     
     .container{
-        grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         width:90%;
         column-gap: 1.625em ;
         row-gap: 2.875em;
@@ -266,5 +336,43 @@ nav a:hover {
 
     .article-preview{
         word-spacing: 4px;
+    }
+
+    .content-container{
+        width:90%;
+        margin-top: 4.43em;
+        margin-bottom: 4.43em;
+    }
+
+    .sub-container{
+        width:85%;
+        margin: 0 auto;
+    }
+
+    .article-post-img{
+        width:100%;
+        margin: 2.25em 0;
+    }
+
+    p{
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .userinfo-container{
+        display: flex;
+    }
+
+    .unserinfo-container .profile-pic{
+        width: 182px;
+        height: 182px;
+    }
+
+    .userinfo-details{
+        margin-left: 2.06em;
+    }
+
+    .userinfo-details .article-title-post{
+        margin-bottom: 0.5em;
     }
 }
